@@ -18,11 +18,13 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             background-color: #a6a8aa;
             padding-top: 40px;
+            margin: 0;
         }
 
         .container {
@@ -38,41 +40,24 @@
 
         .header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
+            padding: 28px 24px 0 24px;
         }
 
-        .icon-left{
-            background-color: white;
-            width: 40px;
-            height: 40px;
+        .icon-left,
+        .icon-right {
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
+            background-color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 30px;
-            margin-left: 25px;
-            cursor: pointer;
         }
 
-        .icon-left>img{
-            width: 20px;
-            height: 20px;
-        }
-
-        .icon-right{
-            background-color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 30px;
-            margin-left: 450px;
-            cursor: pointer;
-        }
-
-        .icon-right>img{
+        .icon-left img,
+        .icon-right img {
             width: 20px;
             height: 20px;
         }
@@ -125,7 +110,7 @@
             padding: 5px;
         }
 
-        .linked>button {
+        .linked>a {
             font-size: 16px;
             margin: 10px 20px;
             padding: 15px;
@@ -135,6 +120,8 @@
             display: flex;
             align-items: center;
             cursor: pointer;
+            color: black;
+            text-decoration: none;
         }
 
         .linked>button:hover {
@@ -158,7 +145,7 @@
         .tulisan {
             position: static;
             text-align: center;
-            color: #000000;
+            color: black;
             flex: 1;
         }
 
@@ -181,7 +168,7 @@
             padding-top: 30px;
         }
 
-        .join>button {
+        .join>a {
             font-size: 16px;
             margin: 5px 10px;
             padding: 10px;
@@ -190,7 +177,16 @@
             background-color: white;
             cursor: pointer;
             box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+            color: black;
+            text-decoration: none;
+            display: block;
             width: 250px;
+            margin: 10px auto;
+        }
+
+        .join>a:hover {
+            color: black;
+            text-decoration: none;
         }
 
         .nunito-join {
@@ -207,7 +203,7 @@
         }
 
         .footer>a {
-            color: #000000;
+            color: black;
             font-size: 11px;
 
         }
@@ -226,12 +222,12 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="icon-left">
+            <a href="#" class="icon-left">
                 <img src="assets/img/logo-linktree.webp">
-            </div>
-            <div class="icon-right">
-                <img src="assets/img/logo-share.png">
-            </div>
+            </a>
+            <a href="#" class="icon-right">
+                <img src="assets/img/logo-share.jpeg">
+            </a>
         </div>
         <!-- Profil Picture -->
         <div class="profile">
@@ -242,51 +238,51 @@
         <!-- Linktree Button -->
         <div class="linked">
             <!-- Logo Instagram -->
-            <button class="nunito-button" type="button" class="btn btn-light">
+            <a href="#" class="nunito-button" role="button">
                 <img class="logo" src="assets/img/logo-instagram.webp">
                 <span class="tulisan">Ursnack Indonesia | Instagram</span>
                 <i class="bi bi-three-dots-vertical"></i>
-            </button>
+            </a>
             <!-- Logo Tiktok -->
-            <button class="nunito-button" type="button" class="btn btn-light">
+             <a href="#" class="nunito-button" role="button">
                 <img class="logo" src="assets/img/logo-tiktok.webp">
                 <span class="tulisan">Ursnack Indonesia | TikTok</span>
                 <i class="bi bi-three-dots-vertical"></i>
-            </button>
+            </a>
             <!-- Logo Affiliate -->
-            <button class="nunito-button" type="button" class="btn btn-light">
+             <a href="#" class="nunito-button" role="button">
                 <img class="logo" src="assets/img/logo-affiliate.webp">
                 <span class="tulisan">Ursnack Affiliate Squad Registration</span>
                 <i class="bi bi-three-dots-vertical"></i>
-            </button>
+            </a>
             <!-- Logo Reseller -->
-            <button class="nunito-button" type="button" class="btn btn-light">
+             <a href="#" class="nunito-button" role="button">
                 <img class="logo" src="assets/img/logo-reseller.webp">
                 <span class="tulisan">Reseller | Admin UrSnacks</span>
                 <i class="bi bi-three-dots-vertical"></i>
-            </button>
+            </a>
             <!-- Logo WA -->
-            <button class="nunito-button" type="button" class="btn btn-light">
+             <a href="#" class="nunito-button" role="button">
                 <img class="logo" src="assets/img/logo-wa.webp">
                 <span class="tulisan">Partnership or Collaboration</span>
                 <i class="bi bi-three-dots-vertical"></i>
-            </button>
+            </a>
             <!-- Logo Shopee -->
-            <button class="nunito-button" type="button" class="btn btn-light">
+             <a href="#" class="nunito-button" role="button">
                 <img class="logo" src="assets/img/logo-shopee.webp">
                 <span class="tulisan">Ursnack Indonesia | Shopee</span>
                 <i class="bi bi-three-dots-vertical"></i>
-            </button>
+            </a>
             <!-- Logo Tokopedia -->
-            <button class="nunito-button" type="button" class="btn btn-light">
+             <a href="#" class="nunito-button" role="button">
                 <img class="logo" src="assets/img/logo-tokped.webp">
                 <span class="tulisan">Ursnack Indonesia | Tokopedia</span>
                 <i class="bi bi-three-dots-vertical"></i>
-            </button>
+            </a>
         </div>
         <!-- Footer -->
         <div class="join">
-            <button class="nunito-join" type="button" class="btn btn-info">Join UrsnacksID on Linktree</button>
+            <a href="#" class="nunito-join" role="button">Join UrsnacksID on Linktree</a>
         </div>
         <div class="footer">
             <a class="nunito-footer" href="#">Cookie Preferences</a>
